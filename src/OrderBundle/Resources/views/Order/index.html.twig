@@ -1,0 +1,45 @@
+<h3>List</h3>
+
+<form action="" method="get">
+id: <input size="10" type="text" value="" name="id" />
+&nbsp;&nbsp;&nbsp;
+marketplace: <input size="10" type="text" value="" name="marketplace" />
+&nbsp;&nbsp;&nbsp;
+idFlux: <input size="10" type="text" value="" name="idFlux" />
+&nbsp;&nbsp;&nbsp;
+orderStatusMarketplace: <input size="10" type="text" value="" name="orderStatusMarketplace" />
+&nbsp;&nbsp;&nbsp;
+orderStatusLengow: <input size="10" type="text" value="" name="orderStatusLengow" />
+&nbsp;&nbsp;&nbsp;
+orderId: <input size="10" type="text" value="" name="orderId" />
+<br/>
+<br/>
+<button>Rechercher</button>
+</form>
+
+<br/>
+<br/>
+
+<table border="1">
+    <tr>
+        <th></th>
+        <th>id</th>
+        <th>marketplace</th>
+        <th>idFlux</th>
+        <th>orderStatusMarketplace</th>
+        <th>orderStatusLengow</th>
+        <th>orderId</th>
+    </tr>
+
+    {% for entity in orderList %}
+        <tr>
+            <td><a href="{{ path('order_view', { id: entity.id }) }}">View</a></td>
+            <td>{{ entity.id }}</td>
+            <td>{{ entity.marketplace }}</td>
+            <td>{{ entity.idFlux }}</td>
+            <td>{{ entity.orderStatusMarketplace }}</td>
+            <td>{{ entity.orderStatusLengow }}</td>
+            <td>{{ entity.orderId }}</td>
+        </tr>
+    {% endfor %}
+</table>

@@ -1,0 +1,61 @@
+<?php
+
+namespace OrderBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Orders
+ *
+ * @ORM\Table(name="orders")
+ * @ORM\Entity
+ */
+class Orders
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="marketplace", type="string", length=10, nullable=false)
+     */
+    private $marketplace;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id_flux", type="integer", nullable=false)
+     */
+    private $idFlux;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="order_status_marketplace", type="string", length=30, nullable=false)
+     */
+    private $orderStatusMarketplace;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="order_status_lengow", type="string", length=30, nullable=false)
+     */
+    private $orderStatusLengow;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="order_id", type="string", length=30, nullable=false)
+     */
+    private $orderId;
+
+
+}
+
